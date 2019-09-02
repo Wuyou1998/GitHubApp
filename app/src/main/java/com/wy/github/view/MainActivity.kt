@@ -1,28 +1,22 @@
-package com.wy.github
+package com.wy.github.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.wy.mvp.impl.MainFragment
+import com.wy.github.R
+import com.wy.github.settings.Settings
 import kotlinx.android.synthetic.main.layout_main.*
 
-/* 名称: GitHubApp.com.wy.github.MainActivity
+/* 名称: GitHubApp.com.wy.github.view.MainActivity
   * 用户: _VIEW
   * 时间: 2019/9/1,15:06
   * 描述: 主界面
   */
 class MainActivity : AppCompatActivity() {
-    val TAG = "MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_main)
         edt_email.setText(Settings.email)
         edt_password.setText(Settings.password)
-        val mainFragment:MainFragment= MainFragment()
-        Log.e(TAG,mainFragment.toString())
-        Log.e(TAG,mainFragment.presenter.toString())
-        Log.e(TAG,mainFragment.presenter.view.toString())
-        mainFragment.onPause()
 
         btn_login.setOnClickListener {
             Settings.email = edt_email.text.toString().trim()

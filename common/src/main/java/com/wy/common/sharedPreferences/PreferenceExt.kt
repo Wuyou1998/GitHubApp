@@ -1,4 +1,4 @@
-package com.wy.common
+package com.wy.common.sharedPreferences
 
 import android.content.Context
 import kotlin.properties.ReadWriteProperty

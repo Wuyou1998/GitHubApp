@@ -1,5 +1,6 @@
 package com.wy.common
 
+import com.wy.common.ext.yes
 import org.junit.Test
 
 /* 名称: GitHubApp.com.wy.common.UnitTest

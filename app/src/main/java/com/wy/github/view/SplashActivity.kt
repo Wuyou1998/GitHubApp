@@ -1,9 +1,10 @@
-package com.wy.github
+package com.wy.github.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.wy.github.R
 
 class SplashActivity : AppCompatActivity() {
 
