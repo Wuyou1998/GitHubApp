@@ -3,12 +3,12 @@
 buildscript {
     ext.kotlin_version = '1.3.50'
     repositories {
-        maven{
+        maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
         }
         google()
         jcenter()
-        
+
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
@@ -20,7 +20,7 @@ buildscript {
 
 allprojects {
     repositories {
-        maven{
+        maven {
             url "http://maven.aliyun.com/nexus/content/groups/public"
         }
         google()
