@@ -20,13 +20,14 @@ class Preference<T>(
     }
 
     override fun getValue(thisRef: Any?, property: KProperty<*>): T {
-        return getPreference(name)
+        return getPreference(findProperName(property))
     }
 
     override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
         putPreference(name, value)
     }
 
+    private fun findProperName(property: KProperty<*>) = if (name.isEmpty()) property.name else name
     private fun getPreference(key: String): T {
         return when (default) {
             is Long -> sp.getLong(key, default)
